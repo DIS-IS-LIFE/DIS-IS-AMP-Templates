@@ -2073,6 +2073,21 @@
         }
     },
     {
+        "DisplayName": "Allow Flyer Speed Leveling",
+        "Category": "ARK SA:stadia_controller",
+        "Subcategory": "multipliers_dis:tune:4",
+        "Description": "Erlaubt das Leveln der Bewegungsgeschwindigkeit von Flugtieren.",
+        "Keywords": "",
+        "FieldName": "bAllowFlyerSpeedLeveling",
+        "InputType": "checkbox",
+        "ParamFieldName": "/Script/ShooterGame.ShooterGameMode.bAllowFlyerSpeedLeveling",
+        "DefaultValue": "False",
+        "EnumValues": {
+            "False": "False",
+            "True": "True"
+        }
+    },
+    {
         "DisplayName": "Disable Loot Crates",
         "Category": "ARK SA:stadia_controller",
         "Subcategory": "multipliers_dis:tune:4",
@@ -2959,9 +2974,120 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Disable Cryopod Enemy Check",
+        "Category": "ARK SA:stadia_controller",
+        "Subcategory": "DIS_Server_Settings:settings:5",
+        "Description": "Ignoriert beim Freilassen aus Cryopods die Pruefung auf feindliche Spieler, Strukturen und Dinos.",
+        "Keywords": "cryo,cryopod,enemy,check,disablecryopodenemycheck",
+        "FieldName": "DisableCryopodEnemyCheck",
+        "InputType": "checkbox",
+        "ParamFieldName": "ServerSettings.DisableCryopodEnemyCheck",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "False",
+        "EnumValues": {
+            "False": "False",
+            "True": "True"
+        }
+    },
+    {
+        "DisplayName": "Disable Cryopod Fridge Requirement",
+        "Category": "ARK SA:stadia_controller",
+        "Subcategory": "DIS_Server_Settings:settings:5",
+        "Description": "Deaktiviert die Cryofridge-Anforderung beim Freilassen von Kreaturen aus Cryopods.",
+        "Keywords": "cryo,cryopod,fridge,requirement,disablecryopodfridgerequirement",
+        "FieldName": "DisableCryopodFridgeRequirement",
+        "InputType": "checkbox",
+        "ParamFieldName": "ServerSettings.DisableCryopodFridgeRequirement",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "False",
+        "EnumValues": {
+            "False": "False",
+            "True": "True"
+        }
+    },
+    {
+        "DisplayName": "Allow Cryo Fridge On Saddle",
+        "Category": "ARK SA:stadia_controller",
+        "Subcategory": "DIS_Server_Settings:settings:5",
+        "Description": "Erlaubt das Platzieren von Cryofridges auf Plattform-Saetteln und Floessen.",
+        "Keywords": "cryo,fridge,saddle,platform,raft,allowcryofridgeonsaddle",
+        "FieldName": "AllowCryoFridgeOnSaddle",
+        "InputType": "checkbox",
+        "ParamFieldName": "ServerSettings.AllowCryoFridgeOnSaddle",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "False",
+        "EnumValues": {
+            "False": "False",
+            "True": "True"
+        }
+    },
+    {
+        "DisplayName": "Cryo Hospital Mating Cooldown Reduction",
+        "Category": "ARK SA:stadia_controller",
+        "Subcategory": "DIS_Server_Settings:settings:5",
+        "Description": "Legt fest, wie stark die Paarungs-Abklingzeit im Cryo-Hospital reduziert wird.",
+        "Keywords": "cryo,hospital,mating,cooldown,reduction,cryohospitalmatingcooldownreduction",
+        "FieldName": "CryoHospitalMatingCooldownReduction",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "ServerSettings.CryoHospitalMatingCooldownReduction",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "2.0",
+        "Placeholder": "2.0",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Cryo Hospital Hours To Drain Torpor",
+        "Category": "ARK SA:stadia_controller",
+        "Subcategory": "DIS_Server_Settings:settings:5",
+        "Description": "Legt fest, nach wie vielen Stunden Torpor im Cryo-Hospital abgebaut wird.",
+        "Keywords": "cryo,hospital,hours,drain,torpor,cryohospitalhourstodraintorpor",
+        "FieldName": "CryoHospitalHoursToDrainTorpor",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "ServerSettings.CryoHospitalHoursToDrainTorpor",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "1.0",
+        "Placeholder": "1.0",
+        "Suffix": "hours",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Cryo Hospital Hours To Regen Food",
+        "Category": "ARK SA:stadia_controller",
+        "Subcategory": "DIS_Server_Settings:settings:5",
+        "Description": "Legt fest, nach wie vielen Stunden Nahrung im Cryo-Hospital regeneriert wird.",
+        "Keywords": "cryo,hospital,hours,regen,food,cryohospitalhourstoregenfood",
+        "FieldName": "CryoHospitalHoursToRegenFood",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "ServerSettings.CryoHospitalHoursToRegenFood",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "24.0",
+        "Placeholder": "24.0",
+        "Suffix": "hours",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Cryo Hospital Hours To Regen HP",
+        "Category": "ARK SA:stadia_controller",
+        "Subcategory": "DIS_Server_Settings:settings:5",
+        "Description": "Legt fest, nach wie vielen Stunden Lebenspunkte im Cryo-Hospital regeneriert werden.",
+        "Keywords": "cryo,hospital,hours,regen,hp,health,cryohospitalhourstoregenhp",
+        "FieldName": "CryoHospitalHoursToRegenHP",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "ServerSettings.CryoHospitalHoursToRegenHP",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "24.0",
+        "Placeholder": "24.0",
+        "Suffix": "hours",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Enable Structure Stasis Grid",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Structures:home:5",
+        "Subcategory": "Structures:home:6",
         "Description": "Aktiviert das Structure-Stasis-Grid zur Verbesserung der Serverleistung bei grossen Basen mit vielen Spielern. Strukturen werden anhand von Gittern mit Spielern geladen. Fuer Mod-Server nicht empfohlen.",
         "Keywords": "structure,stasis,grid,usestructurestasisgrid",
         "FieldName": "UseStructureStasisGrid",
@@ -2976,7 +3102,7 @@
     {
         "DisplayName": "Disable PvE Structure Decay",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Structures:home:5",
+        "Subcategory": "Structures:home:6",
         "Description": "Deaktiviert im PvE-Modus den schrittweisen Verfall von Spieler-Strukturen nach 7 Tagen.",
         "Keywords": "pve,structure,decay,disablestructuredecaypve",
         "FieldName": "DisableStructureDecayPvE",
@@ -2992,7 +3118,7 @@
     {
         "DisplayName": "Override Structure Platform Prevention",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Structures:home:5",
+        "Subcategory": "Structures:home:6",
         "Description": "Erlaubt, dass Geschuetze und Stachel-Strukturen auf Plattform-Saetteln gebaut werden und funktionieren.",
         "Keywords": "override,structure,platform,overridestructureplatformprevention",
         "FieldName": "OverrideStructurePlatformPrevention",
@@ -3008,7 +3134,7 @@
     {
         "DisplayName": "Disable Building In Rich Resource Areas",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Structures:home:5",
+        "Subcategory": "Structures:home:6",
         "Description": "Verhindert das Bauen in bestimmten ressourcenreichen Gebieten vollstaendig, insbesondere auf The Island rund um die grossen Berge.",
         "Keywords": "rich,resources,block,building,extra,structure,prevention,enableextrastructurepreventionvolumes",
         "FieldName": "EnableExtraStructurePreventionVolumes",
@@ -3024,7 +3150,7 @@
     {
         "DisplayName": "Allow PvE Structures At Supply Drops",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Structures:home:5",
+        "Subcategory": "Structures:home:6",
         "Description": "Erlaubt im PvE-Modus das Bauen in der Naehe von Supply-Drop-Punkten.",
         "Keywords": "pve,supply,drops,structures,pveallowstructuresatsupplydrops",
         "FieldName": "PvEAllowStructuresAtSupplyDrops",
@@ -3040,7 +3166,7 @@
     {
         "DisplayName": "Disable Structure Placement Collision",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Structures:home:5",
+        "Subcategory": "Structures:home:6",
         "Description": "Deaktiviert die Platzierungs-Kollision fuer Strukturen, sodass sie sich mit Gelaende oder Hindernissen ueberschneiden koennen.",
         "Keywords": "structure,placement,collision,bdisablestructureplacementcollision",
         "FieldName": "bDisableStructurePlacementCollision",
@@ -3055,7 +3181,7 @@
     {
         "DisplayName": "Always Allow Structure Pickup",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Structures:home:5",
+        "Subcategory": "Structures:home:6",
         "Description": "Deaktiviert das Zeitlimit des Schnell-Aufheben-Systems.",
         "Keywords": "quick,pickup,pick-up,timer,AlwaysAllowStructurePickup",
         "FieldName": "AlwaysAllowStructurePickup",
@@ -3071,7 +3197,7 @@
     {
         "DisplayName": "Structure Pickup Hold Duration",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Structures:home:5",
+        "Subcategory": "Structures:home:6",
         "Description": "Legt fest, wie lange die Taste zum Schnell-Aufheben gehalten werden muss. 0 = sofortiges Aufheben.",
         "Keywords": "structure,pickup,pick-up,hold,duration,StructurePickupHoldDuration",
         "FieldName": "StructurePickupHoldDuration",
@@ -3086,7 +3212,7 @@
     {
         "DisplayName": "Structure Pickup Time After Placement",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Structures:home:5",
+        "Subcategory": "Structures:home:6",
         "Description": "Legt fest, wie lange nach dem Platzieren das Schnell-Aufheben verfuegbar ist.",
         "Keywords": "structure,pickup,pick-up,time,placement,StructurePickupTimeAfterPlacement",
         "FieldName": "StructurePickupTimeAfterPlacement",
@@ -3101,7 +3227,7 @@
     {
         "DisplayName": "Enable Cluster",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Aktiviert die Nutzung eines Server-Clusters. Erfordert Cluster Directory Override und Cluster ID.",
         "Keywords": "cluster,enable",
         "FieldName": "EnableCluster",
@@ -3116,7 +3242,7 @@
     {
         "DisplayName": "Cluster Directory Override",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Legt den Pfad zu einem gemeinsamen Cluster-Verzeichnis fuer einen Server-Cluster fest. Das Verzeichnis muss fuer alle Cluster-Server erreichbar sein. Bei Docker muss es in den Container eingebunden werden. Erfordert Enable Cluster.",
         "Keywords": "cluster,directory,override,clusterdiroverride",
         "FieldName": "ClusterDirOverride",
@@ -3130,7 +3256,7 @@
     {
         "DisplayName": "Cluster ID",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Legt die Cluster ID fuer einen Server-Cluster fest. Sie muss auf allen Servern im Cluster identisch sein. Erfordert Enable Cluster.",
         "Keywords": "cluster,id,clusterid",
         "FieldName": "clusterID",
@@ -3144,7 +3270,7 @@
     {
         "DisplayName": "Prevent Character Download",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Verhindert das Herunterladen von Charakteren aus einem Cluster auf den Server.",
         "Keywords": "prevent,download,tribute,characters,data,transfer,cluster,notributedownloads",
         "FieldName": "NoTributeDownloads",
@@ -3161,7 +3287,7 @@
     {
         "DisplayName": "Prevent Survivor Download",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Verhindert das Herunterladen von Survivors aus einem Cluster auf den Server.",
         "Keywords": "prevent,download,survivor,data,transfer,cluster,preventdownloadsurvivors",
         "FieldName": "PreventDownloadSurvivors",
@@ -3178,7 +3304,7 @@
     {
         "DisplayName": "Prevent Item Download",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Verhindert das Herunterladen von Items aus einem Cluster auf den Server.",
         "Keywords": "prevent,download,items,data,transfer,cluster,preventdownloaditems",
         "FieldName": "PreventDownloadItems",
@@ -3195,7 +3321,7 @@
     {
         "DisplayName": "Prevent Creature Download",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Verhindert das Herunterladen gezaehmter Kreaturen aus einem Cluster auf den Server.",
         "Keywords": "prevent,download,creatures,data,transfer,cluster,preventdownloaddinos",
         "FieldName": "PreventDownloadDinos",
@@ -3212,7 +3338,7 @@
     {
         "DisplayName": "Prevent Survivor Upload",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Verhindert das Hochladen von Survivors vom Server in einen Cluster.",
         "Keywords": "prevent,upload,survivor,data,transfer,cluster,preventuploadsurvivors",
         "FieldName": "PreventUploadSurvivors",
@@ -3229,7 +3355,7 @@
     {
         "DisplayName": "Prevent Item Upload",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Verhindert das Hochladen von Items vom Server in einen Cluster.",
         "Keywords": "prevent,upload,items,data,transfer,cluster,preventuploaditems",
         "FieldName": "PreventUploadItems",
@@ -3246,7 +3372,7 @@
     {
         "DisplayName": "Prevent Creature Upload",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Verhindert das Hochladen gezaehmter Kreaturen vom Server in einen Cluster.",
         "Keywords": "prevent,upload,creatures,data,transfer,cluster,preventuploaddinos",
         "FieldName": "PreventUploadDinos",
@@ -3263,7 +3389,7 @@
     {
         "DisplayName": "Use Unified Save Data",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Speichert die Charakterprofildatei eines Spielers (.arkprofile) nicht separat vom Karten-Spielstand (.ark) und dessen Backup. Bei Bedarf wird temporaer ein Charakterprofil bis zum naechsten Weltspeichern erstellt. Stammesprofile nutzen ein anderes Format (.arktributetribe).",
         "Keywords": "unified,save,usestore",
         "FieldName": "usestore",
@@ -3278,7 +3404,7 @@
     {
         "DisplayName": "Convert To Unified Save Data",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Konvertiert beim naechsten Weltspeichern nicht gespeicherte Daten in gespeicherte Daten. Aeltere Charakterprofil-Saves werden nicht geloescht. Erfordert Use Unified Save Data.",
         "Keywords": "unified,save,usestore,convert,converttostore",
         "FieldName": "converttostore",
@@ -3293,7 +3419,7 @@
     {
         "DisplayName": "Backup Transfer Player Data",
         "Category": "ARK SA:stadia_controller",
-        "Subcategory": "Clusters:share:6",
+        "Subcategory": "Clusters:share:7",
         "Description": "Laesst den Server beim Umgang mit Spielercharakterdaten offizielle Nicht-Legacy-Server nachbilden und fuegt dauerhafte Charakterprofil-Backups getrennt vom Welt-Save hinzu. Erfordert Use Unified Save Data.",
         "Keywords": "unified,save,usestore,backup,transfer,backuptransferplayerdata",
         "FieldName": "BackupTransferPlayerDatas",
